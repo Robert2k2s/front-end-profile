@@ -1,0 +1,69 @@
+.Future {
+  width: 100%;
+  height: auto;
+  & .Future-Banner {
+    text-align: center;
+    background-image: linear-gradient(
+        0,
+        rgba(4, 9, 30, 0.4),
+        rgba(4, 9, 30, 0.4)
+      ),
+      url("../../acssets/img/1_3T7J7csXY8u36acofw5N8g.jpeg");
+    border-radius: 10px;
+    width: 100%;
+    height: 390px;
+
+    & .Future-Title {
+      padding: 80px 0 60px 0;
+      & h1 {
+        color: white;
+        font-size: 40px;
+      }
+      & p {
+        color: #c7c5c5;
+        font-size: 20px;
+      }
+    }
+  }
+  & .Future-Main {
+    width: 100%;
+    padding: 0 100px;
+    margin-top: -120px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+
+    & .Future-Main-item {
+      height: 250px;
+      background-color: red;
+      border-radius: 10px;
+      text-align: center;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 10px 30px 0 #8ab92dcd;
+      & img {
+        width: 70px;
+        height: 60px;
+        border-radius: 10px;
+        background-size: contain;
+      }
+
+      & p {
+        color: #777777;
+        font-size: 15px;
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 997px) {
+  .Future {
+    & .Future-Banner {
+    }
+    & .Future-Main {
+      padding: 0;
+    }
+  }
+}

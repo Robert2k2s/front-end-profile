@@ -1,0 +1,101 @@
+.Nav {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 56px;
+  background-color: rgba(4, 9, 30, 0.8);
+  padding: 0 calc(15%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .Nav-List {
+    cursor: pointer;
+    & .List {
+      display: flex;
+      align-items: center;
+
+      & a {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 12px;
+        color: rgb(255, 255, 255);
+        padding: 20px;
+        transition: color 0.15s ease;
+        &:hover {
+          color: #8ab92d;
+        }
+      }
+    }
+    & .Lists {
+      // visibility: hidden;
+      // opacity: 0;
+      // transition: 0.3s;
+      position: fixed;
+      left: 0;
+      right: 0;
+      background-color: #0000009f;
+      width: 100%;
+      & a {
+        display: block;
+        padding: 20px 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 12px;
+        color: rgb(255, 255, 255);
+      }
+    }
+    & .menu-icon {
+      display: none;
+      right: 0;
+      & i {
+        display: inline-block;
+        font-size: 24px;
+        padding: 7px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.523);
+        color: #fff;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// media
+
+@media only screen and (max-width: 997px) {
+  .Nav {
+    & .Nav-List {
+      & .List {
+        display: none;
+      }
+      & .Lists {
+        height: 40%;
+        display: block;
+        animation: animations 0.5s;
+        transition: 0.5;
+        // top: 0;
+        & a {
+          &:hover {
+            background-color: #8ab92d5b;
+          }
+        }
+      }
+      & .menu-icon {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes animations {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    overflow: hidden;
+    height: 40%;
+  }
+}

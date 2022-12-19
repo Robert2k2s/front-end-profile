@@ -1,0 +1,51 @@
+.Banner {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  border-radius: 10px;
+  background: url("https://preview.colorlib.com/theme/portfolio/img/header-bg.jpg.webp")
+    center;
+  z-index: 10;
+  background-size: cover;
+  & .Banner-dereption {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  & h5 {
+    color: #8ab92d;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 17px;
+  }
+
+  & h2 {
+    color: #dadada;
+    font-size: 52px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: "Oleo Script Swash Caps", cursive;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & a {
+    background: #8ab92d;
+    border: 1px solid transparent;
+    color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+    line-height: 36px;
+    display: inline-block;
+    transition: all 0.15s ease;
+    &:hover {
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+    }
+  }
+}
